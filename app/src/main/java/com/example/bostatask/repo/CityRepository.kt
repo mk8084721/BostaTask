@@ -9,9 +9,9 @@ import javax.inject.Inject
 class CityRepository @Inject constructor(
     private val apiService: ApiService
 ) {
-    fun getCities(): Flow<Result<CitiesResponse>> = flow {
+    fun getCities(countryId : String): Flow<Result<CitiesResponse>> = flow {
         try {
-            val response = apiService.getCities()
+            val response = apiService.getCities(countryId)
             emit(Result.success(response))
         } catch (e: Exception) {
             emit(Result.failure(e))

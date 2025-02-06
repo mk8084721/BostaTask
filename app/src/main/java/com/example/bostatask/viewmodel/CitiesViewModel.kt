@@ -17,10 +17,11 @@ class CitiesViewModel @Inject constructor(
 
     private val _citiesState = MutableStateFlow<Result<CitiesResponse>?>(null)
     val citiesState: StateFlow<Result<CitiesResponse>?> get() = _citiesState
+    val countryId = "60e4482c7cb7d4bc4849c4d5"
 
     fun fetchCities() {
         viewModelScope.launch {
-            repository.getCities().collect { result ->
+            repository.getCities(countryId).collect { result ->
                 _citiesState.value = result
             }
         }
