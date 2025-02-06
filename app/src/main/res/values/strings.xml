@@ -2,4 +2,6 @@
     <string name="app_name">BostaTask</string>
     <string name="searchCity">City / Area</string>
     <string name="chooseArea">Choose the delivery area</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.bostatask.viewmodel
 
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.bostatask.model.CitiesResponse
@@ -12,7 +13,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CitiesViewModel @Inject constructor(
-    private val repository: CityRepository
+    private val repository: CityRepository,
+    private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
     private val _citiesState = MutableStateFlow<Result<CitiesResponse>?>(null)

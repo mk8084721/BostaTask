@@ -51,6 +51,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    //navHost
+    implementation("androidx.navigation:navigation-fragment:2.7.7")
+    implementation("androidx.navigation:navigation-ui:2.7.7")
+
     //courotines
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0-RC.2")

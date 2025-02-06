@@ -6,7 +6,6 @@ import retrofit2.http.Headers
 import retrofit2.http.Query
 
 interface ApiService {
-    @Headers("Content-Type: application/json")
     @GET("cities/getAllDistricts")
     suspend fun getCities(@Query("countryId") countryId: String): CitiesResponse
 }
