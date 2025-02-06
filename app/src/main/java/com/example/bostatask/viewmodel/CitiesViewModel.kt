@@ -13,8 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CitiesViewModel @Inject constructor(
-    private val repository: CityRepository,
-    private val savedStateHandle: SavedStateHandle
+    private val repository: CityRepository
 ) : ViewModel() {
 
     private val _citiesState = MutableStateFlow<Result<CitiesResponse>?>(null)

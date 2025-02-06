@@ -17,12 +17,5 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        /*// Load the fragment dynamically
-        if (savedInstanceState == null) {
-            supportFragmentManager.commit {
-                replace(R.id.fragment_container, CityListFragment())
-            }
-        }*/
     }
 }

@@ -33,7 +33,6 @@ class CityAdapter(private var cities: List<City>) : RecyclerView.Adapter<CityAda
         private val districtAdapter = DistrictAdapter()
 
         init {
-            // Set up the nested RecyclerView for districts
             districtRecyclerView.layoutManager = LinearLayoutManager(itemView.context)
             districtRecyclerView.adapter = districtAdapter
 
@@ -41,7 +40,7 @@ class CityAdapter(private var cities: List<City>) : RecyclerView.Adapter<CityAda
             itemView.setOnClickListener {
                 val city = cities[adapterPosition]
                 city.isExpanded = !city.isExpanded
-                notifyItemChanged(adapterPosition) // Refresh the item
+                notifyItemChanged(adapterPosition)
             }
         }
 
